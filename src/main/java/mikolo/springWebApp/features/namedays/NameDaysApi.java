@@ -82,7 +82,7 @@ public class NameDaysApi {
 		
 		NameDaysData nameDaysEntity = restTemplate.postForObject("https://nameday.abalin.net/today",
 				new HttpEntity<String>(requestJson, headers), NameDaysData.class);
-		return "Dziś jest " + utilities.getDate() + ". Imieniny obchodzą: " + nameDaysEntity.getData().getNamedays().getPl();
+		return "Dziś jest " + utilities.getDate() + ". Imieniny obchodzą: " + nameDaysEntity.getData().getNamedays().getPl() + ".";
 	}
 	
 	public List<String> getNameDays1(){
